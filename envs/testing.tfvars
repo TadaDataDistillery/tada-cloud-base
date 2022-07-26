@@ -1,0 +1,10 @@
+env = "testing"
+region = "us-east-1"
+vpc_name = "tada_testing"
+vpc_cidr = "10.26.0.0/16"
+private_subnets = ["10.26.32.0/21","10.26.40.0/21"]
+public_subnets = ["10.26.48.0/21","10.26.56.0/21"]
+enable_natgateway = true
+enable_vpngateway = false
+count_eip_nat = 1
+owner_tag = "Xerris DevOps Team"
