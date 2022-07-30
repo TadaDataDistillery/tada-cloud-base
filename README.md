@@ -15,7 +15,7 @@ The  `.terraform-version` and `version.tf` files  works with tfenv utility. It w
     ```
 * .terraform-version
     ```
-    0.15.5
+    1.2.6
     ```
 * Deployment user with programatic access created at the Root account with `AWSAdministratorAccess`.
 * AssumeRole policy created at Root account and assigned to the Deployment User.
