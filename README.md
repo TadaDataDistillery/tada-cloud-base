@@ -1,5 +1,5 @@
 # data-distillery
-TA-DA Data Distillery
+AWS Cloud base configuration for the TA-DA Data Distillery compute environments.
 
 ## Requirements
 * [terraform](https://www.terraform.io/downloads) - AWS Infrastructure Automation
