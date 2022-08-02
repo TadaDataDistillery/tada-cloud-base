@@ -2,6 +2,14 @@ variable "env" {
     default =  "sandbox"
 }
 
+variable "region" {
+    default = "us-east-1"
+}
+
+variable "owner_tag" {
+    default = "Xerris DevOps Team"
+}
+
 variable "create_vpc" {
   default = true
 }
@@ -18,10 +26,6 @@ variable "private_subnets_ids" {
 variable "public_subnets_ids" {
   default = []
   type = list
-}
-
-variable "region" {
-    default = "us-east-1"
 }
 
 variable "vpc_name" {
@@ -52,8 +56,4 @@ variable "external_nat_ip_ids" {
 }
 variable "count_eip_nat" {
   default = 1
-}
-
-variable "owner_tag" {
-    default = "Xerris DevOps Team"
 }
