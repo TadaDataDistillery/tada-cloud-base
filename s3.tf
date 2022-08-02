@@ -8,7 +8,7 @@ module "tada_agdata_sales_app_s3" {
     enabled = true
   }
   
-  tags = merge(local.common_tags, map(
-    "Name", local.tada_agdata_sales_s3
-  ))
+  tags = merge(local.common_tags, tomap({
+    "Name" = local.tada_agdata_sales_s3
+  }))
 }
