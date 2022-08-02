@@ -9,6 +9,6 @@ module "tada_agdata_sales_app_s3" {
   }
   
   tags = merge(local.common_tags, map(
-    "Name", var.bucket_name
+    "Name", local.tada_agdata_sales_s3
   ))
 }
