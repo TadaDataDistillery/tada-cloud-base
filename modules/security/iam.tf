@@ -20,4 +20,7 @@ resource "aws_iam_policy" "lambda_agdata_sales_iam_policy" {
       },
     ]
   })
+  tags = merge(var.common_tags, map(
+    "Name", "agdata-sales-iam-policy-${var.env}"
+  ))
 }

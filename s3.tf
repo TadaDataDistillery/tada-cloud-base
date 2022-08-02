@@ -1,20 +1,3 @@
-module "tada_releases_s3" {
-  source = "terraform-aws-modules/s3-bucket/aws"
-
-  bucket = local.tada_releases_s3
-  acl    = "private"
-
-  versioning = {
-    enabled = true
-  }
-  
-  tags = {
-    Owner       = var.owner_tag
-    Environment = var.env
-    Terraform   = true
-  }
-}
-
 module "tada_agdata_sales_app_s3" {
   source = "terraform-aws-modules/s3-bucket/aws"
 
@@ -25,9 +8,7 @@ module "tada_agdata_sales_app_s3" {
     enabled = true
   }
   
-  tags = {
-    Owner       = var.owner_tag
-    Environment = var.env
-    Terraform   = true
-  }
+  tags = merge(var.common_tags, map(
+    "Name", var.bucket_name
+  ))
 }

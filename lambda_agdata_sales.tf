@@ -1,19 +1,19 @@
-module "tada_agdata_sales_report" {
-  source = "terraform-aws-modules/lambda/aws"
-
-  function_name = "${local.tada_agdata_sales_name}-report"
-  description   = "AgData Weekly Sales Report"
-  handler       = "index.lambda_handler"
-  runtime       = "python3.9"
-
-  source_path = local.tada_agdata_sales_release
-
-  tags = {
-    Owner       = var.owner_tag
-    Environment = var.env
-    Terraform   = true
-  }
-}
+#module "tada_agdata_sales_report" {
+#  source = "terraform-aws-modules/lambda/aws"
+#
+#  function_name = "${local.tada_agdata_sales_name}-report"
+#  description   = "AgData Weekly Sales Report"
+#  handler       = "index.lambda_handler"
+#  runtime       = "python3.9"
+#
+#  source_path = local.tada_agdata_sales_release
+#
+#  tags = {
+#    Owner       = var.owner_tag
+#    Environment = var.env
+#    Terraform   = true
+#  }
+#}
 
 
 #module "lambda_function" {
