@@ -8,7 +8,7 @@ module "tada_agdata_sales_app_s3" {
     enabled = true
   }
   
-  tags = merge(var.common_tags, map(
+  tags = merge(local.common_tags, map(
     "Name", var.bucket_name
   ))
 }
